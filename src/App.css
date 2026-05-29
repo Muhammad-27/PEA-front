@@ -1,0 +1,145 @@
+:root {
+  --bg-color: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-main: #333333;
+  --primary-color: #2481cc;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.app-header h3 { margin: 0; font-size: 18px; }
+
+.app-main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.vocab-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.word-card {
+  width: 100%;
+  min-height: 250px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.word-card:active {
+  transform: scale(0.98);
+}
+
+.word-title {
+  font-size: 32px;
+  margin: 0 0 10px 0;
+  color: #111;
+}
+
+.word-context {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.hint-text {
+  color: #aaa;
+  font-size: 12px;
+}
+
+.translation-section {
+  width: 100%;
+}
+
+.translation-section hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 15px 0;
+}
+
+.word-translation {
+  font-size: 24px;
+  color: #2e7d32;
+  margin: 0;
+}
+
+.button-group {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  flex: 1;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+.btn:active { opacity: 0.8; }
+.btn-red { background-color: #e53935; }
+.btn-green { background-color: #43a047; }
+.btn-blue { background-color: var(--primary-color); margin-top: 20px;}
+
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.finish-screen h2 { color: #2e7d32; margin-bottom: 10px; }
+.srs-note { color: #666; font-size: 14px; }
